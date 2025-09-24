@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --header-bg-light: #234C6A;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --text-secondary: #7f8c8d;
+    --accent-blue: #3498db;
+    --email-bg: #f1c40f;
+    --linkedin-bg: #3498db;
+    --phone-bg: #2ecc71;
+    --instagram-bg: #e74c3c;
+    --border-radius: 15px;
+    --section-bg-dark: #2d3e50;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    --primary-bg: #0F172A; /* slate-900 */
+    --card-bg: #1E293B; /* slate-800 */
+    --header-bg-light: #234C6A;
+    --text-dark: #F1F5F9; /* slate-100 */
+    --text-light: #F1F5F9;
+    --text-secondary: #94A3B8; /* slate-400 */
+    --section-bg-dark: #334155; /* slate-700 */
+    --accent-blue: #38bdf8; /* sky-400 */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for sticky navbar */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(30, 41, 59, 0.8); /* slate-800 with transparency */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #334155; /* slate-700 */
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.navbar a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+.navbar a:hover {
+    color: var(--accent-blue);
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg-light);
+    color: var(--text-light);
+    padding: 20px 40px 0;
+    border-bottom-left-radius: 50px;
+}
+
+.header-content {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.illustration img {
+    width: 220px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.intro-text {
+    padding-bottom: 20px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.intro-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.intro-text p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+.intro-text .intro-tag {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.position-box {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 8px 20px;
+}
+
+.position-box .dots, .position-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.position-box .dots {
+    width: 20px;
+    height: 5px;
+    background:
+        radial-gradient(circle, #fff 100%, transparent 100%) 0,
+        radial-gradient(circle, #fff 100%, transparent 100%) 7px,
+        radial-gradient(circle, #fff 100%, transparent 100%) 14px;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+}
+
+.position-text {
+    font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Increased gap between sections */
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.section-divider {
+    height: 4px;
+    width: 50px;
+    background-color: var(--accent-blue);
+    border-radius: 2px;
+}
+
+/* General Item List Styling */
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.item-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--section-bg-dark);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.item-list .item-title {
+    font-weight: 500;
+    flex: 1;
+    min-width: 200px;
+}
+.item-list .view-item-btn {
+    text-decoration: none;
+    color: var(--accent-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Education */
+.timeline {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.timeline-item {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--section-bg-dark);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border-top: 5px solid transparent;
+    color: var(--text-light);
+}
+
+.timeline-item.active {
+    border-top: 5px solid var(--accent-blue);
+}
+
+.timeline-content .year {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.timeline-content .year.badge {
+    background-color: var(--accent-blue);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+}
+
+.timeline-content .university {
+    margin: 10px 0 5px;
+    font-weight: 500;
+}
+
+.timeline-content .major {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Experience */
+.experience-item {
+    background-color: var(--section-bg-dark);
+    color: var(--text-light);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.experience-header .year, .experience-header .company {
+    margin-bottom: 5px;
+}
+
+.experience-header .year {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.experience-header .company {
+    font-weight: 600;
+}
+
+.experience-item .job-title { margin: 5px 0; font-weight: 500; }
+.experience-item .position { margin: 0 0 15px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7); }
+
+.job-duration {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: var(--section-bg-dark);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Projects Section */
+.project-item {
+     background-color: var(--section-bg-dark);
+     padding: 20px;
+     border-radius: var(--border-radius);
+     margin-bottom: 15px;
+     border-left: 5px solid var(--accent-blue);
+}
+.project-item:last-child { margin-bottom: 0; }
+.project-title { margin: 0 0 5px; font-size: 1.1rem; font-weight: 600; }
+.project-description { margin: 0 0 10px; font-size: 0.9rem; color: var(--text-secondary); }
+.project-link { text-decoration: none; font-weight: 600; color: var(--accent-blue); }
+
+/* Get In Touch */
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+.contact-box.linkedin, .contact-box.instagram { color: #fff; }
+.contact-box:hover { transform: translateY(-5px); }
+.contact-box i { font-size: 1.5rem; margin-right: 12px; }
+.contact-box.email { background-color: var(--email-bg); }
+.contact-box.linkedin { background-color: var(--linkedin-bg); }
+.contact-box.phone { background-color: var(--phone-bg); }
