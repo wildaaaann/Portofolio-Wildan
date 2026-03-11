@@ -1,31 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;500;600;700&display=swap');
 
+/* =========================================
+   1. VARIABLES & THEMES
+========================================= */
 :root {
-    /* --- LIGHT MODE (DEFAULT - Tampilan Bersih) --- */
-    --primary-bg: #f8fafc;       /* Background halaman: Abu-abu sangat muda */
-    --card-bg: #ffffff;          /* Container utama: Putih bersih */
-    
-    /* Header & Nav */
-    --header-bg: linear-gradient(135deg, #234C6A 0%, #2980b9 100%); /* Gradient Biru */
-    --navbar-bg: rgba(255, 255, 255, 0.95); /* Navbar Putih Transparan */
-    --navbar-text: #1e293b;      /* Teks Navbar: Gelap */
-    --navbar-border: #e2e8f0;    /* Garis bawah navbar: Abu muda */
-
-    /* Text Colors */
-    --text-main: #1e293b;        /* Teks Utama: Hampir hitam */
-    --text-muted: #64748b;       /* Teks Sekunder: Abu-abu */
-    --text-inverse: #ffffff;     /* Teks Putih (untuk di atas background biru/gelap) */
-
-    /* Item Box (Kotak Experience, Project, dll) */
-    --item-bg: #ffffff;          /* Background Item: Putih */
-    --item-border: #e2e8f0;      /* Garis pinggir: Abu muda */
-    --item-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Bayangan halus */
-    
-    /* Accents */
-    --accent-blue: #0ea5e9;      /* Biru Cerah (Sky-500) */
-    --border-radius: 12px;       /* Sudut membulat */
-    
-    /* Contact Colors (Tetap) */
+    /* --- LIGHT MODE (DEFAULT) --- */
+    --primary-bg: #f8fafc;       
+    --card-bg: #ffffff;          
+    --header-bg: linear-gradient(135deg, #234C6A 0%, #2980b9 100%); 
+    --navbar-bg: rgba(255, 255, 255, 0.95); 
+    --navbar-text: #1e293b;      
+    --navbar-border: #e2e8f0;    
+    --text-main: #1e293b;        
+    --text-muted: #64748b;       
+    --text-inverse: #ffffff;     
+    --item-bg: #ffffff;          
+    --item-border: #e2e8f0;      
+    --item-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+    --accent-blue: #0ea5e9;      
+    --border-radius: 12px;       
     --email-bg: #f59e0b;
     --linkedin-bg: #0077b5;
     --phone-bg: #10b981;
@@ -34,31 +27,27 @@
 
 /* --- DARK MODE THEME --- */
 body.dark-mode {
-    --primary-bg: #0f172a;       /* Slate-900 (Gelap banget) */
-    --card-bg: #1e293b;          /* Slate-800 (Agak terang dikit) */
-    
-    /* Header & Nav */
-    --header-bg: linear-gradient(135deg, #234C6A 0%, #2980b9 100%); /* Gradient Biru */
-    --navbar-bg: rgba(15, 23, 42, 0.95); /* Navbar gelap transparan */
-    --navbar-text: #f1f5f9;      /* Teks Navbar: Putih */
-    --navbar-border: #334155;    /* Garis bawah: Slate-700 */
-
-    /* Text Colors */
-    --text-main: #f1f5f9;        /* Teks Utama: Putih */
-    --text-muted: #94a3b8;       /* Teks Sekunder: Abu kebiruan */
-    --text-inverse: #f1f5f9;     /* Teks tetap putih */
-
-    /* Item Box */
-    --item-bg: #334155;          /* Background Item: Slate-700 */
-    --item-border: #475569;      /* Garis pinggir: Lebih gelap */
-    --item-shadow: none;         /* Tidak perlu bayangan di dark mode */
-    
-    --accent-blue: #38bdf8;      /* Biru terang (Sky-400) */
+    --primary-bg: #0f172a;       
+    --card-bg: #1e293b;          
+    --header-bg: linear-gradient(135deg, #234C6A 0%, #2980b9 100%); 
+    --navbar-bg: rgba(15, 23, 42, 0.95); 
+    --navbar-text: #f1f5f9;      
+    --navbar-border: #334155;    
+    --text-main: #f1f5f9;        
+    --text-muted: #94a3b8;       
+    --text-inverse: #f1f5f9;     
+    --item-bg: #334155;          
+    --item-border: #475569;      
+    --item-shadow: none;         
+    --accent-blue: #38bdf8;      
 }
 
+/* =========================================
+   2. GENERAL STYLES
+========================================= */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Offset for sticky navbar */
+    scroll-padding-top: 80px; 
 }
 
 body {
@@ -69,40 +58,57 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Default Nav Layout */
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--navbar-text); /* Mengikuti tema */
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Main Container */
 .container {
-    width: 100%;
-    max-width: 900px;
+    width: 100%; 
+    max-width: 900px; 
     background-color: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 20px; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 20px auto;
+    overflow: hidden; 
+    margin: 20px auto; 
     transition: background-color 0.3s;
 }
 
-/* Navigation Bar */
+.main-content { 
+    padding: 40px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 40px; 
+}
+
+.section-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.section-header h2 { 
+    margin: 0; 
+    font-size: 1.8rem; 
+    font-weight: 600; 
+    color: var(--text-main); 
+}
+
+.section-divider { 
+    height: 4px; 
+    width: 50px; 
+    background-color: var(--accent-blue); 
+    border-radius: 2px; 
+}
+
+.hidden { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.visible { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   3. NAVIGATION BAR
+========================================= */
 .navbar {
     position: sticky;
     top: 0;
     background-color: var(--navbar-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     z-index: 1000;
     padding: 15px 40px;
     width: 100%;
@@ -111,411 +117,146 @@ body {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: var(--navbar-text);
-    font-weight: 500;
-    transition: color 0.3s;
-    font-size: 0.9rem;
-}
-
-.navbar a:hover {
-    color: var(--accent-blue);
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        background-color: var(--navbar-bg);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        padding: 20px;
-        gap: 15px;
-        border-bottom: 1px solid var(--navbar-border);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .navbar ul.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* Header / Hero Section */
-header {
-    background: var(--header-bg);
-    color: var(--text-inverse);
-    padding: 40px 40px 20px;
-    border-bottom-left-radius: 50px;
-    transition: background 0.3s;
-}
-
-.header-content {
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-}
-
-.illustration img {
-    width: 220px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 50%; /* Opsional: membuat foto bulat */
-    border: 4px solid rgba(255,255,255,0.2);
-}
-
-.intro-text {
-    padding-bottom: 20px;
-    flex: 1;
-    min-width: 250px;
-}
-
-.intro-text h1 {
-    font-size: 3.5rem; /* Sedikit diperkecil agar pas di mobile */
-    font-weight: 700;
-    margin: 0;
-    line-height: 1.1;
-    color: var(--text-inverse);
-}
-
-.intro-text p {
-    margin: 10px 0 0;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9); /* Putih agak transparan */
-}
-
-.intro-text .intro-tag {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 20px;
-}
-
-.position-box {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    padding: 8px 20px;
-    backdrop-filter: blur(5px);
-}
-
-.position-text {
-    font-weight: 500;
-    color: var(--text-inverse);
-}
-
-/* Main Content Layout */
-.main-content {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-/* Section Header */
-.section-header {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.section-header h2 {
+/* Logo Styling */
+.nav-logo {
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-name { font-weight: 700; color: var(--text-main); letter-spacing: 0.5px; }
+.logo-divider { color: var(--accent-blue); font-weight: 300; }
+.logo-text { font-weight: 400; color: var(--text-muted); font-size: 1.1rem; }
+
+/* Nav Menu List */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     margin: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--text-main);
+    padding: 0;
+    list-style: none;
 }
 
-.section-divider {
-    height: 4px;
-    width: 50px;
+/* Link Navigasi */
+.navbar a {
+    text-decoration: none;
+    border-bottom: none !important; /* Hapus garis bawah bawaan/lama */
+}
+
+.nav-link {
+    color: var(--navbar-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active-link {
+    color: var(--accent-blue);
+}
+
+/* Animasi Garis Bawah Navbar */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%; 
+    height: 2px;
     background-color: var(--accent-blue);
+    transition: width 0.3s ease-in-out;
     border-radius: 2px;
 }
 
-/* --- ITEM STYLING (UPDATED FOR LIGHT THEME) --- */
+.nav-link:hover::after, .nav-link.active-link::after {
+    width: 100%; 
+}
 
-/* General Item List (Certificates/Books) */
-.item-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Tombol Kanan (Tema & Menu Mobile) */
+.nav-actions {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 15px;
 }
 
-.item-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--item-bg);
-    border: 1px solid var(--item-border);
-    box-shadow: var(--item-shadow);
-    color: var(--text-main);
-    padding: 15px 20px;
-    border-radius: var(--border-radius);
-    flex-wrap: wrap;
-    gap: 10px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.item-list li:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-blue);
-}
-
-.item-list .item-title {
-    font-weight: 500;
-    flex: 1;
-    min-width: 200px;
-}
-.item-list .view-item-btn {
-    text-decoration: none;
-    color: var(--accent-blue);
-    font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-/* Education Timeline */
-.timeline {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.timeline-item {
-    flex: 1;
-    min-width: 200px;
-    background-color: var(--item-bg);
-    border: 1px solid var(--item-border);
-    box-shadow: var(--item-shadow);
-    color: var(--text-main);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    border-top: 5px solid transparent;
-    transition: transform 0.2s;
-}
-
-.timeline-item.active {
-    border-top: 5px solid var(--accent-blue);
-}
-
-.timeline-content .year {
-    font-weight: 600;
-    font-size: 0.9rem;
-    display: inline-block;
-    margin-bottom: 5px;
-}
-
-.timeline-content .year.badge {
-    background-color: var(--accent-blue);
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-}
-
-.timeline-content .university {
-    margin: 10px 0 5px;
-    font-weight: 500;
-}
-
-.timeline-content .major {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-/* Experience */
-.experience-item {
-    background-color: var(--item-bg);
-    border: 1px solid var(--item-border);
-    box-shadow: var(--item-shadow);
-    color: var(--text-main);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    position: relative;
-    transition: transform 0.2s;
-}
-
-.experience-item:hover {
-    transform: translateY(-3px);
-}
-
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-}
-
-.experience-header .year {
-    background-color: var(--accent-blue);
-    color: #000000;
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-
-.experience-header .company {
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.experience-item .job-title { 
-    margin: 5px 0; 
-    font-weight: 500; 
-    color: var(--text-main);
-}
-.experience-item .position { 
-    margin: 0 0 15px; 
-    font-size: 0.9rem; 
-    color: var(--text-muted); 
-}
-
-.job-duration {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    border-top: 1px solid var(--item-border);
-    padding-top: 15px;
-    margin-top: 15px;
-}
-
-/* Skills Section */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill-tag {
-    background-color: var(--item-bg);
-    border: 1px solid var(--item-border);
-    color: var(--text-main);
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s;
-}
-
-.skill-tag:hover {
-    background-color: var(--accent-blue);
-    color: #fff;
-    border-color: var(--accent-blue);
-}
-
-/* Projects Section */
-.project-item {
-     background-color: var(--item-bg);
-     border: 1px solid var(--item-border);
-     box-shadow: var(--item-shadow);
-     color: var(--text-main);
-     padding: 20px;
-     border-radius: var(--border-radius);
-     margin-bottom: 15px;
-     border-left: 5px solid var(--accent-blue);
-     transition: transform 0.2s;
-}
-.project-item:last-child { margin-bottom: 0; }
-.project-item:hover { transform: translateX(5px); }
-
-.project-title { margin: 0 0 5px; font-size: 1.1rem; font-weight: 600; }
-.project-description { margin: 0 0 10px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-.project-link { text-decoration: none; font-weight: 600; color: var(--accent-blue); }
-.project-link:hover { text-decoration: underline; }
-
-/* Get In Touch */
-.contact-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-.contact-box {
-    display: flex;
-    align-items: center;
-    padding: 12px 18px;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    color: #333; /* Default text color for contact buttons */
-    font-weight: 500;
-    transition: transform 0.2s ease;
-}
-.contact-box.linkedin, .contact-box.instagram { color: #fff; }
-.contact-box:hover { transform: translateY(-5px); }
-.contact-box i { font-size: 1.5rem; margin-right: 12px; }
-.contact-box.email { background-color: var(--email-bg); }
-.contact-box.linkedin { background-color: var(--linkedin-bg); }
-.contact-box.phone { background-color: var(--phone-bg); }
-
-/* --- INTERACTIVE & ANIMATION STYLES --- */
-
-/* 1. Animation States (Controlled by JS) */
-.hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* 2. Active Link Highlight (ScrollSpy) */
-.navbar a.active-link {
-    color: var(--accent-blue);
-    border-bottom: 2px solid var(--accent-blue);
-}
-
-/* 3. Theme Toggle Button */
 .theme-toggle {
     background: none;
     border: none;
     color: var(--navbar-text);
     font-size: 1.2rem;
     cursor: pointer;
-    margin-left: 15px;
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s ease, color 0.3s ease;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle:hover {
     color: var(--accent-blue);
-    transform: rotate(15deg);
+    transform: rotate(30deg) scale(1.1);
 }
 
-/* Typing Cursor Effect */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--navbar-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   4. HEADER / HERO SECTION
+========================================= */
+header { 
+    background: var(--header-bg); 
+    color: var(--text-inverse); 
+    padding: 40px 40px 20px; 
+    border-bottom-left-radius: 50px; 
+    transition: background 0.3s; 
+}
+
+.header-content { display: flex; align-items: flex-end; flex-wrap: wrap; }
+.illustration img { width: 220px; height: auto; margin-right: 20px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2); }
+.intro-text { padding-bottom: 20px; flex: 1; min-width: 250px; }
+
+.intro-text h1 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.5rem; 
+    font-weight: 700;
+    margin: 0 0 5px 0; 
+    line-height: 1.1;
+    color: var(--text-inverse);
+}
+
+.intro-text p { margin: 10px 0 0; font-size: 1rem; color: rgba(255, 255, 255, 0.9); }
+.intro-text .intro-tag { 
+    font-size: 0.9rem; 
+    color: rgba(255, 255, 255, 0.7); 
+    margin-bottom: 20px; 
+    text-align: justify; /* Ini kode untuk rata kanan-kiri */
+    line-height: 1.6;    /* Tambahan agar jarak antar baris teks lebih rapi dan enak dibaca */
+}
+.position-box { display: inline-flex; align-items: center; background-color: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50px; padding: 8px 20px; backdrop-filter: blur(5px); }
+.position-text { font-weight: 500; color: var(--text-inverse); }
+
+/* Animasi Kursor Ketik */
 .position-text::after {
-    content: '|';
-    animation: blink 1s infinite;
+    content: ',';
+    animation: blink 0.8s infinite;
 }
 
 @keyframes blink {
@@ -523,14 +264,284 @@ header {
     50% { opacity: 0; }
 }
 
-/* Mobile Adjustments for toggle */
-@media (max-width: 768px) {
-    .nav-container {
-        position: relative;
+/* =========================================
+   5. EDUCATION SECTION
+========================================= */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.edu-card {
+    background-color: var(--item-bg);
+    border: 1px solid var(--item-border);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--item-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.edu-card.active { border-top: 4px solid var(--accent-blue); }
+.edu-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--accent-blue); }
+
+.edu-icon {
+    background-color: rgba(14, 165, 233, 0.1);
+    color: var(--accent-blue);
+    width: 55px; height: 55px;
+    border-radius: 12px;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.edu-card:hover .edu-icon { background-color: var(--accent-blue); color: #fff; }
+
+.edu-year {
+    background-color: var(--item-border);
+    color: var(--text-muted);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.edu-card.active .edu-year { background-color: var(--accent-blue); color: #fff; }
+.edu-university { margin: 0 0 5px; font-size: 1.2rem; font-weight: 600; color: var(--text-main); }
+.edu-major { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+
+/* =========================================
+   6. EXPERIENCE SECTION (TIMELINE)
+========================================= */
+.experience-timeline {
+    position: relative;
+    padding-left: 40px; 
+    display: flex; flex-direction: column; gap: 30px;
+}
+
+.experience-timeline::before {
+    content: ''; position: absolute; left: 15px; top: 0; bottom: 0;
+    width: 2px; background-color: var(--item-border);
+}
+
+.exp-timeline-item { position: relative; }
+
+.exp-timeline-dot {
+    position: absolute; left: -40px; top: 0;
+    width: 32px; height: 32px; border-radius: 50%;
+    background-color: var(--card-bg); 
+    border: 2px solid var(--accent-blue); color: var(--accent-blue);
+    display: flex; justify-content: center; align-items: center;
+    font-size: 0.9rem; z-index: 1; transition: all 0.3s ease;
+}
+
+.exp-timeline-item:hover .exp-timeline-dot {
+    background-color: var(--accent-blue); color: #fff;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+.exp-timeline-content {
+    background-color: var(--item-bg); border: 1px solid var(--item-border);
+    border-radius: var(--border-radius); padding: 25px; box-shadow: var(--item-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.exp-timeline-item:hover .exp-timeline-content { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--accent-blue); }
+
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; }
+.exp-role { margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-main); flex: 1; }
+.exp-year { background-color: rgba(14, 165, 233, 0.1); color: var(--accent-blue); padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; white-space: nowrap; }
+.exp-company { margin: 0 0 15px 0; font-size: 0.95rem; font-weight: 500; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+.exp-desc { margin: 0 0 10px 0; font-size: 0.9rem; color: var(--text-main); }
+.exp-list { margin: 0; padding-left: 20px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+.exp-list li { margin-bottom: 5px; }
+
+/* =========================================
+   7. SKILLS SECTION
+========================================= */
+.skills-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.skill-tag { 
+    background-color: var(--item-bg); 
+    border: 1px solid var(--item-border); 
+    color: var(--text-main); 
+    padding: 8px 15px; 
+    border-radius: 50px; 
+    font-size: 0.9rem; 
+    font-weight: 500; 
+    transition: all 0.2s; 
+}
+
+.skill-tag:hover { 
+    background-color: var(--accent-blue); 
+    color: #fff; 
+    border-color: var(--accent-blue); 
+}
+
+/* =========================================
+   8. PROJECTS SECTION
+========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: var(--item-bg);
+    border: 1px solid var(--item-border);
+    box-shadow: var(--item-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 0; 
+}
+
+.project-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 215px; 
+    object-fit: cover; 
+    border-bottom: 1px solid var(--item-border);
+}
+
+.project-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+.project-title { 
+    margin: 0 0 10px; font-size: 1.1rem; font-weight: 600; color: var(--text-main);
+}
+
+.project-description { 
+    margin: 0 0 15px; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; 
+    display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.project-link { 
+    text-decoration: none; font-weight: 600; color: var(--accent-blue); margin-top: auto; display: inline-block;
+}
+
+.project-link:hover { text-decoration: underline; }
+
+/* =========================================
+   9. CERTIFICATES & BOOKS
+========================================= */
+.certificate-list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 15px;
+}
+
+.cert-item {
+    background-color: var(--item-bg); border: 1px solid var(--item-border); border-radius: var(--border-radius);
+    padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;
+    transition: all 0.3s ease; position: relative; overflow: hidden;
+}
+
+.cert-item::before {
+    content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px;
+    background-color: var(--accent-blue); transform: scaleY(0); transition: transform 0.3s ease;
+}
+
+.cert-item:hover { transform: translateX(5px); border-color: var(--accent-blue); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+.cert-item:hover::before { transform: scaleY(1); }
+
+.cert-left { display: flex; align-items: center; gap: 18px; }
+
+.cert-icon-box {
+    background-color: rgba(14, 165, 233, 0.1); color: var(--accent-blue); width: 45px; height: 45px;
+    border-radius: 10px; display: flex; justify-content: center; align-items: center;
+    font-size: 1.3rem; flex-shrink: 0;
+}
+
+.cert-details { display: flex; flex-direction: column; gap: 4px; }
+.cert-title { margin: 0; font-size: 1rem; font-weight: 600; color: var(--text-main); }
+.cert-id { font-size: 0.85rem; color: var(--text-muted); font-weight: 400; }
+.cert-issuer { margin: 0; font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+.cert-right { display: flex; align-items: center; }
+
+.cert-btn {
+    text-decoration: none; background-color: transparent; color: var(--accent-blue);
+    font-weight: 500; font-size: 0.9rem; padding: 8px 18px; border: 1px solid var(--accent-blue);
+    border-radius: 50px; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px; white-space: nowrap;
+}
+
+.cert-btn:hover { background-color: var(--accent-blue); color: #ffffff; }
+
+/* =========================================
+   10. CONTACT SECTION
+========================================= */
+.contact-links { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px; 
+}
+
+.contact-box { 
+    display: flex; 
+    align-items: center; 
+    padding: 12px 18px; 
+    border-radius: var(--border-radius); 
+    text-decoration: none; 
+    color: #333; 
+    font-weight: 500; 
+    transition: transform 0.2s ease; 
+}
+
+.contact-box.linkedin, .contact-box.instagram { color: #fff; }
+.contact-box:hover { transform: translateY(-5px); }
+.contact-box i { font-size: 1.5rem; margin-right: 12px; }
+.contact-box.email { background-color: var(--email-bg); }
+.contact-box.linkedin { background-color: var(--linkedin-bg); }
+.contact-box.phone { background-color: var(--phone-bg); }
+
+/* =========================================
+   11. MEDIA QUERIES (RESPONSIVE)
+========================================= */
+@media (max-width: 900px) {
+    /* Navbar Responsive */
+    .navbar { padding: 15px 25px; }
+    
+    .nav-menu { 
+        display: none; flex-direction: column; background-color: var(--navbar-bg); 
+        position: absolute; top: 65px; left: 0; right: 0; padding: 20px; gap: 20px; 
+        border-bottom: 1px solid var(--navbar-border); box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+        text-align: center; 
     }
-    .theme-toggle {
-        position: absolute;
-        right: 50px; /* Adjust position near hamburger menu */
-        top: 0;
-    }
+    
+    .nav-menu.show { display: flex; }
+    .menu-toggle { display: block; }
+}
+
+@media (max-width: 600px) {
+    /* Timeline Experience Responsive */
+    .experience-timeline { padding-left: 30px; }
+    .experience-timeline::before { left: 10px; }
+    .exp-timeline-dot { left: -30px; width: 24px; height: 24px; font-size: 0.7rem; }
+    .exp-header { flex-direction: column; }
+    .exp-year { align-self: flex-start; }
+
+    /* Certificates Responsive */
+    .cert-item { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .cert-right { width: 100%; justify-content: flex-end; }
 }

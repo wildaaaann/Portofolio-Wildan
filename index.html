@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | Muhammad Wildan Zalul</title>
+    
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
     <link rel="stylesheet" href="portofolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -11,19 +14,28 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <span class="logo">Wildan | Portofolio</span>
-            <button class="menu-toggle" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul id="nav-menu">
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#books">Books</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#" class="nav-logo">
+                <span class="logo-name">Wildan</span> <span class="logo-divider">|</span> <span class="logo-text">Portofolio</span>
+            </a>
+
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#books" class="nav-link">Books</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -35,41 +47,48 @@
                     <img src="assets/2.jpg" alt="">
                 </div>
                 <div class="intro-text">
-                    <h1>Hi,</h1>
+                    <h1 class="position-text"></h1>
                     <p>I'm Muhammad Wildan Zalul from Jakarta</p>
-                    <p class="intro-tag">Network Engineer and Cyber Security Enthusiast. Familiar about MikroTik, Cisco, Juniper, Fortinet, F5, and Server proprietaries.
-                                Eager to be challenged in order to grow and further improve my IT skills.
-                                My greatest passion is in life is using my technical know-how to benefit other people and organizations.</p>
+                    <p class="intro-tag">Network Engineer & Cyber Security Analyst specializing in infrastructure security and proactive threat monitoring. 
+                        I blend strong networking expertise (Cisco, MikroTik, Fortinet) with advanced security operations (Azure Sentinel) and AI-driven threat intelligence workflows. 
+                        Passionate about leveraging technology to build and secure resilient IT environments.</p>
                     <div class="position-box">
                         <!-- <span class="dots"></span> -->
-                        <span class="position-text">Network Engineer | Cyber Security Enthusiast</span>
+                        <span>Network Engineer | Cyber Security Enthusiast</span>
                     </div>
                 </div>
             </div>
         </header>
 
         <main class="main-content">
+
             <!-- Education Section -->
             <section id="education" class="card-section">
                 <div class="section-header">
                     <h2>Education</h2>
                     <span class="section-divider"></span>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item active">
-                        <div class="timeline-content">
-                            <span class="year badge">2023 - 2027</span>
-                            <p class="university">Binus University</p>
-                            <p class="major">Cyber Security</p>
+                
+                <div class="education-grid">
+                    
+                    <div class="edu-card active">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-content">
+                            <span class="edu-year">2023 - 2027</span>
+                            <h3 class="edu-university">Binus University</h3>
+                            <p class="edu-major">Cyber Security</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <span class="year">2023</span>
-                            <p class="university">SMK IDN Boarding School</p>
-                            <p class="major">Network Engineer</p>
+
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-content">
+                            <span class="edu-year">2023</span> 
+                            <h3 class="edu-university">SMK IDN Boarding School</h3>
+                            <p class="edu-major">Network Engineer</p>
                         </div>
                     </div>
+
                 </div>
             </section>
 
@@ -79,143 +98,191 @@
                     <h2>Experience</h2>
                     <span class="section-divider"></span>
                 </div>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">June, 2024</span>
-                        <span class="company">IDN.ID Training Center</span>
-                     </div>
-                     <p class="job-title">Training F5 BIG-IP LTM</p>
-                     <ul>
-                         <li>Initial Configuration</li>
-                         <li>IP Services</li>
-                         <li>Configuring Virtual Server</li>
-                         <li>Understanding Dynamic Load Balancing Method</li>
-                         <li>Priority Base method</li>
-                         <li>Configuration SSL Profiles</li>
-                         <li>DNS</li>
-                     </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">May, 2024</span>
-                        <span class="company">IDN.ID Training Center</span>
-                     </div>
-                     <p class="job-title">Training Fortinet NSE 7-SD-WAN</p>
-                    <ul>
-                        <li>Initial Configuration</li>
-                        <li>Performance SLA</li>
-                        <li>Traffic Shaping</li>
-                        <li>Integration to FortiManager</li>
-                        <li>Configuration Spoke</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">August, 2023</span>
-                        <span class="company">IDN.ID Training Center</span>
-                     </div>
-                     <p class="job-title">Training Juniper JNCIA</p>
-                    <ul>
-                        <li>Routing Fundamental</li>
-                        <li>Protocol OSPF</li>
-                        <li>ISIS Addressing concept</li>
-                        <li>Firewall and Routing Policy</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">June, 2023</span>
-                        <span class="company">IDN.ID Training Center</span>
-                     </div>
-                     <p class="job-title">Training Basic Penetration Testing</p>
-                    <ul>
-                        <li>Setup Environment Lap Pentest (Kali, Metaspolitable2)</li>
-                        <li>Prerequisite Fundamental</li>
-                        <li>Introduction Cyber Security</li>
-                        <li>Planning and Scoping Rules of Engagement (RoE)</li>
-                        <li>Information Gathering</li>
-                        <li>Exploit System</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">June, 2024</span>
-                        <span class="company">DPK Asosiasi Pengusaha Indonesia (APINDO)</span>
-                     </div>
-                     <p class="job-title">Router installation</p>
-                     <p>Pemasangan Perangkat Router Tp-Link Wr 840n</p>
-                    <ul>
-                        <li>Ducting</li>
-                        <li>Mounting</li>
-                        <li>Configuration</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">Jul, 2022 - Sep, 2022</span>
-                        <span class="company">PT. Mitra Karya Tehnik Indonesia</span>
-                     </div>
-                     <p class="job-title">IT Support (Internship)</p>
-                    <ul>
-                        <li>Monitoring wi-fi bandwidth</li>
-                        <li>Make a website Company mktikompresor.com</li>
-                        <li>Social media specialist(Instagram, Facebook, Linkedin)</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">Mar, 2022 - Jun, 2022</span>
-                        <span class="company">PT. Global Transformasi Teknologi</span>
-                     </div>
-                     <p class="job-title">IT Engineer (Internship)</p>
-                    <ul>
-                        <li>Server deployment and maintenance</li>
-                        <li>Learn F5 BIG IP LTM</li>
-                        <li>Learn Ruijie</li>
-                        <li>NSE 2 certification</li>
-                        <li>TekTalk saba cloud certification HPE PROLIANT, HPE INFOSIGHT, HPE SIMPLIVITY</li>
-                        <li>Daily server maintenance PT. Jasa Raharja</li>
-                        <li>Daily server maintenance BP Batam</li>
-                        <li>Daily server maintenance Bank Mandiri TasPen</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">Jan, 2022 - Feb, 2022</span>
-                        <span class="company">PT. Akses Satu Nusantara</span>
-                     </div>
-                     <p class="job-title">Network Operation Center (Internship)</p>
-                    <ul>
-                        <li>Monitoring project BAKTI xCheck project BAKTI 167 Site</li>
-                        <li>Project NGFW</li>
-                        <li>Bandwidth report to client (VSAT), troubleshoot to client, installing ubuntu</li>
-                    </ul>
-                </div>
-                <br>
-                <div class="experience-item">
-                     <div class="experience-header">
-                        <span class="year">October, 2021</span>
-                        <span class="company">SMKS Informatika Al-Ihya, Banjarsari</span>
-                     </div>
-                     <p class="job-title">MTCNA Trainer for Grades 10, 11, 12 (IDN Mengajar)</p>
-                    <ul>
-                        <li>Preconfig</li>
-                        <li>Firewall</li>
-                        <li>Wireless</li>
-                        <li>Queue</li>
-                        <li>Network management</li>
-                    </ul>
-                </div>
+                
+                <div class="experience-timeline">
+                    
+                    <!-- Experience 1 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-shield-alt"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">SOC Analyst</h3>
+                                <span class="exp-year">Feb, 2026 - Present</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i>PT. Nusantara Compnet Integrator</p>
+                            <ul class="exp-list">
+                                <li>Triage incident ticket from Microsoft Azure Sentinel</li>
+                                <li>Daily report to customer and internal</li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <!-- Experience 1 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-laptop-code"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">Training F5 BIG-IP LTM</h3>
+                                <span class="exp-year">June, 2024</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            <ul class="exp-list">
+                                <li>Initial Configuration & IP Services</li>
+                                <li>Configuring Virtual Server</li>
+                                <li>Understanding Dynamic Load Balancing Method</li>
+                                <li>Priority Base method</li>
+                                <li>Configuration SSL Profiles & DNS</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-laptop-code"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">Training Fortinet NSE 7-SD-WAN</h3>
+                                <span class="exp-year">May, 2024</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            <ul class="exp-list">
+                                <li>Initial Configuration</li>
+                                <li>Performance SLA</li>
+                                <li>Traffic Shaping</li>
+                                <li>Integration to FortiManager</li>
+                                <li>Configuration Spoke</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-laptop-code"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">Training Juniper JNCIA</h3>
+                                <span class="exp-year">August, 2023</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            <ul class="exp-list">
+                                <li>Routing Fundamental</li>
+                                <li>Protocol OSPF</li>
+                                <li>ISIS Addressing concept</li>
+                                <li>Firewall and Routing Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-shield-alt"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">Training Basic Penetration Testing</h3>
+                                <span class="exp-year">June, 2023</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            <ul class="exp-list">
+                                <li>Setup Environment Lap Pentest (Kali, Metasploitable2)</li>
+                                <li>Prerequisite Fundamental & Introduction Cyber Security</li>
+                                <li>Planning and Scoping Rules of Engagement (RoE)</li>
+                                <li>Information Gathering & Exploit System</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 5 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-network-wired"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">Router Installation</h3>
+                                <span class="exp-year">June, 2024</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> DPK Asosiasi Pengusaha Indonesia (APINDO)</p>
+                            <p class="exp-desc">Pemasangan Perangkat Router Tp-Link Wr 840n:</p>
+                            <ul class="exp-list">
+                                <li>Ducting</li>
+                                <li>Mounting</li>
+                                <li>Configuration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 6 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-briefcase"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">IT Support (Internship)</h3>
+                                <span class="exp-year">Jul, 2022 - Sep, 2022</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> PT. Mitra Karya Tehnik Indonesia</p>
+                            <ul class="exp-list">
+                                <li>Monitoring wi-fi bandwidth</li>
+                                <li>Make a website Company mktikompresor.com</li>
+                                <li>Social media specialist (Instagram, Facebook, Linkedin)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 7 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-server"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">IT Engineer (Internship)</h3>
+                                <span class="exp-year">Mar, 2022 - Jun, 2022</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> PT. Global Transformasi Teknologi</p>
+                            <ul class="exp-list">
+                                <li>Server deployment and maintenance</li>
+                                <li>Learn F5 BIG IP LTM & Ruijie</li>
+                                <li>NSE 2 certification</li>
+                                <li>TekTalk saba cloud certification HPE PROLIANT, HPE INFOSIGHT, HPE SIMPLIVITY</li>
+                                <li>Daily server maintenance: PT. Jasa Raharja, BP Batam, Bank Mandiri TasPen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 8 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-globe"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">Network Operation Center (Internship)</h3>
+                                <span class="exp-year">Jan, 2022 - Feb, 2022</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> PT. Akses Satu Nusantara</p>
+                            <ul class="exp-list">
+                                <li>Monitoring project BAKTI xCheck project BAKTI 167 Site</li>
+                                <li>Project NGFW</li>
+                                <li>Bandwidth report to client (VSAT), troubleshoot to client, installing ubuntu</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 9 -->
+                    <div class="exp-timeline-item">
+                        <div class="exp-timeline-dot"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="exp-timeline-content">
+                            <div class="exp-header">
+                                <h3 class="exp-role">MTCNA Trainer for Grades 10, 11, 12 (IDN Mengajar)</h3>
+                                <span class="exp-year">October, 2021</span>
+                            </div>
+                            <p class="exp-company"><i class="fas fa-building"></i> SMKS Informatika Al-Ihya, Banjarsari</p>
+                            <ul class="exp-list">
+                                <li>Preconfig</li>
+                                <li>Firewall</li>
+                                <li>Wireless</li>
+                                <li>Queue</li>
+                                <li>Network management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </section>
-
             <!-- Skills Section -->
             <section id="skills" class="card-section">
                 <div class="section-header">
@@ -223,6 +290,10 @@
                     <span class="section-divider"></span>
                 </div>
                 <div class="skills-container">
+                    <span class="skill-tag">Azure Sentinel</span>
+                    <span class="skill-tag">Fortigate</span>
+                    <span class="skill-tag">Streamlit</span>
+                    <span class="skill-tag">Blue team</span>
                     <span class="skill-tag">HTML</span>
                     <span class="skill-tag">C++</span>
                     <span class="skill-tag">CSS</span>
@@ -252,61 +323,81 @@
                     <h2>Projects</h2>
                     <span class="section-divider"></span>
                 </div>
-                <div class="project-item">
-                    <h3 class="project-title">Website Application HealMe</h3>
-                    <p class="project-description">HealMe adalah website open forum dengan nuansa cyber dan non-cyber yang menjadi ruang aman bagi user untuk berbagi cerita, 
-                        curhat, atau menuliskan perasaan tanpa takut dihakimi dan juga memberikan dukungan penuh terhadap isu-isu cyber yang dialami oleh user. 
-                        Setiap pengalaman akan dihargai, sekaligus mendapatkan dukungan dari Psikolog yang memberi respon suportif, Security Analyst yang menjaga keamanan digital 
-                        dan memberikan respon terhadap isu cyber yang dialami user, serta Admin yang memastikan kualitas konten tetap sehat.</p>
-                    <a href="https://heal.ctfvault.my.id/" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
-                </div>
-                <div class="project-item">
-                    <h3 class="project-title">SIEM Implementation Using Wazuh for Attack Detection</h3>
-                    <p class="project-description">Proyek ini berfokus pada implementasi SIEM menggunakan Wazuh untuk mendeteksi dan merespons ancaman secara real-time. 
-                        diuji menggunakan tiga mesin virtual Wazuh Manager di Ubuntu Server, DVWA di Ubuntu Desktop sebagai target, dan Kali Linux sebagai penyerang. 
-                        Serangan seperti brute force, SQL injection, file deletion, dan malicious upload disimulasikan untuk menguji efektivitas sistem. </p>
-                    <a href="https://drive.google.com/file/d/1_qkjVDazwB1JwjsaK0taOs_gFJgO8TXO/view?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
-                </div>
-                <div class="project-item">
-                    <h3 class="project-title">Mobile penetration testing</h3>
-                    <p class="project-description">Aplikasi SIJALU (Sistem Informasi Jaminan Laik Uji) - eKIR Kabupaten Tangerang merupakan solusi digital yang dikembangkan 
-                        oleh Dinas Perhubungan Kabupaten Tangerang. Kelompok kami ditugaskan melakukan mobile pentest pada aplikasi yang tersedia di Play Store. 
-                        Untuk tugas akhir semester 4, kami memilih APK SiJalu sebagai objek pengujian. Saya melakukan analisis statis dan analisis dinamis untuk 
-                        mengidentifikasi potensi celah keamanan. Pada bagian "View Project" ditampilkan progres dan temuan hasil pentest yang telah saya lakukan 
-                        terhadap APK SiJalu.</p>
-                    <a href="https://www.canva.com/design/DAGpONgLlIQ/4eA1ZPYXY98N-KbgB3QrKw/edit?utm_content=DAGpONgLlIQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
-                </div>
-                <div class="project-item">
-                    <h3 class="project-title">Network penetration testing</h3>
-                    <p class="project-description">Tujuan utama kami adalah mendapatkan hak akses tertinggi, yaitu root, pada mesin 'matrix-1'. 
-                        untuk latihan ini, tugas kami selesai setelah berhasil masuk dan memverifikasi bahwa kami telah mendapatkan akses root. 
-                        Metode yang akan kami gunakan adalah serangan brute-force.  
-                        Kami mencoba semua kemungkinan kombinasi username dan password satu per satu menggunakan tool Hydra.</p>
-                    <a href="https://drive.google.com/file/d/16xUpfJKiLMXLc_3cDHgbmJf4Jbhcw6Kv/view?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
-                </div>
-                <div class="project-item">
-                    <h3 class="project-title">Website Application TutorIn</h3>
-                    <p class="project-description">TutorIn adalah rancangan kelompok kami untuk aplikasi web yang mempertemukan siswa dengan tutor secara online. 
-                        Platform ini memungkinkan pengguna untuk mencari tutor, melakukan booking sesi belajar, dan berinteraksi melalui sistem yang user-friendly dan efisien. 
-                        (ID : ST001 Password : eko123)</p>
-                    <p class="project-description">Repository https://github.com/wildaaaann/TutorIn</p>
-                    <a href="https://wildaaaann.github.io/TutorIn/" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
-                </div>
-                <div class="project-item">
-                    <h3 class="project-title">Database Smart Building</h3>
-                    <p class="project-description">Pada mata kuliah Database Technology, kelompok kami merancang basis data untuk sistem Smart Building untuk mengelola data 
-                        layanan, pelanggan, staf, sensor, produk, dan supplier secara efisien. Proses normalisasi dilakukan dari UNF sampai 3NF untuk mengurangi redundansi 
-                        dan menjaga integritas data, dibantu dengan analisis Functional Dependency (FD). Selama perancangan teridentifikasi anomaly pada 
-                        insert, update, dan delete yang menimbulkan inkonsistensi jika tidak dinormalisasi. Hubungan antar entitas divisualisasikan melalui ERD. 
-                        Dengan desain ini, sistem database dapat mendukung pengelolaan data secara optimal.</p>
-                    <a href="https://www.canva.com/design/DAGngFAaUKY/1qh1cPQyoDuNccWelIEifQ/edit?utm_content=DAGngFAaUKY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
-                </div>
-                <div class="project-item">
-                    <h3 class="project-title">Router installation</h3>
-                    <p class="project-description">Pada ujian kompetensi di SMK, saya bersama kelompok melaksanakan project di DPK Asosiasi Pengusaha Indonesia (APINDO) 
-                        berupa pemasangan perangkat Router TP-Link WR840N. Kegiatan yang dilakukan ducting, mounting, serta konfigurasi perangkat. 
-                        Kami juga menghitung batas kemampuan kabel UTP untuk mendapatkan bandwidth optimal, dengan hasil panjang maksimal yang sesuai adalah sekitar 30 meter.</p>
-                    <a href="https://www.canva.com/design/DAFfGkWxZG8/Z4ShvhIE_tK9Fj-F6X_JFw/edit?utm_content=DAFfGkWxZG8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                
+                <div class="projects-grid">
+
+                    <div class="project-item">
+                        <img src="assets/project/streamlit.jpeg" alt="HealMe Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">SOC Threat Intelligence AI Dashboard</h3>
+                            <p class="project-description">This tool reduces the time spent on manual IoC (Indicator of Compromise) investigation by automatically querying multiple Threat Intelligence platforms, aggregating the raw JSON data, and utilizing Google Gemini AI to synthesize the findings into a clear, standardized, and ready-to-copy SOC ticket report.</p>
+                            <a href="https://soc-threat-intel.Streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="assets/project/healme.jpeg" alt="HealMe Project" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Website Application HealMe</h3>
+                            <p class="project-description">HealMe adalah website open forum dengan nuansa cyber dan non-cyber yang menjadi ruang aman bagi user untuk berbagi cerita, curhat, atau menuliskan perasaan tanpa takut dihakimi, sekaligus mendapatkan dukungan dari Psikolog yang memberi respon suportif, Security Analyst yang menjaga keamanan digital dan memberikan respon terhadap isu cyber.</p>
+                            <a href="https://heal.ctfvault.my.id/" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="assets/project/wazuh.jpeg" alt="SIEM Wazuh" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">SIEM Implementation Using Wazuh</h3>
+                            <p class="project-description">Proyek ini berfokus pada implementasi SIEM menggunakan Wazuh untuk mendeteksi dan merespons ancaman secara real-time yang diuji menggunakan tiga mesin virtual. Serangan seperti brute force, SQL injection, file deletion, dan malicious upload disimulasikan untuk menguji efektivitas sistem.</p>
+                            <a href="https://drive.google.com/file/d/1_qkjVDazwB1JwjsaK0taOs_gFJgO8TXO/view?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="assets/project/sijalu.jpeg" alt="Mobile Pentest" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Mobile Penetration Testing</h3>
+                            <p class="project-description">Melakukan mobile pentest pada aplikasi SIJALU (Sistem Informasi Jaminan Laik Uji) - eKIR Kabupaten Tangerang. Analisis statis dan dinamis dilakukan untuk mengidentifikasi celah keamanan.</p>
+                            <a href="https://www.canva.com/design/DAGpONgLlIQ/4eA1ZPYXY98N-KbgB3QrKw/edit?utm_content=DAGpONgLlIQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="assets/project/netpentest.jpeg" alt="Network Pentest" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Network Penetration Testing</h3>
+                            <p class="project-description">Mendapatkan hak akses root pada mesin 'matrix-1'. Kami mencoba semua kemungkinan kombinasi username dan password satu per satu menggunakan tool Hydra.</p>
+                            <a href="https://drive.google.com/file/d/16xUpfJKiLMXLc_3cDHgbmJf4Jbhcw6Kv/view?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="assets/project/tutorin.jpeg" alt="TutorIn" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Website Application TutorIn</h3>
+                            <p class="project-description">Rancangan aplikasi web yang mempertemukan siswa dengan tutor secara online. Memungkinkan pengguna untuk mencari tutor, booking sesi belajar, dan berinteraksi secara efisien.</p>
+                            <a href="https://wildaaaann.github.io/TutorIn/" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="assets/project/database.png" alt="Database Smart Building" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Database Smart Building</h3>
+                            <p class="project-description">Merancang basis data untuk sistem Smart Building. Proses normalisasi dilakukan dari UNF sampai 3NF untuk mengurangi redundansi dan menjaga integritas data.</p>
+                            <a href="https://www.canva.com/design/DAGngFAaUKY/1qh1cPQyoDuNccWelIEifQ/edit?utm_content=DAGngFAaUKY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <img src="assets/project/apindo.jpeg" alt="Router Installation" class="project-image">
+                        <div class="project-content">
+                            <h3 class="project-title">Router Installation</h3>
+                            <p class="project-description">Pemasangan perangkat Router TP-Link WR840N di DPK APINDO. Kegiatan meliputi ducting, mounting, serta konfigurasi perangkat dan perhitungan bandwidth optimal.</p>
+                            <a href="https://www.canva.com/design/DAFfGkWxZG8/Z4ShvhIE_tK9Fj-F6X_JFw/edit?utm_content=DAFfGkWxZG8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="project-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
@@ -316,42 +407,113 @@
                     <h2>Certificates</h2>
                     <span class="section-divider"></span>
                 </div>
-                <ul class="item-list">
-                    <li>
-                        <span class="item-title">F5 BIG-IP LTM (CERT0376411249)</span>
-                        <p class="project-description">IDN.ID Training Center</p>
-                        <a href="https://drive.google.com/file/d/1yqSNQF5WNq0K2_evGW8hFGO0X6NoBrdY/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+                <ul class="certificate-list">
+                    
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">F5 BIG-IP LTM <span class="cert-id">(CERT0376411249)</span></h3>
+                                <p class="cert-issuer"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1yqSNQF5WNq0K2_evGW8hFGO0X6NoBrdY/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">Fortinet NSE 7 SD-WAN (CERT0367411205)</span>
-                        <p class="project-description">IDN.ID Training Center</p>
-                        <a href="#certificates" class="view-item-btn">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">Fortinet NSE 7 SD-WAN <span class="cert-id">(CERT0367411205)</span></h3>
+                                <p class="cert-issuer"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="#certificates" class="cert-btn">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">Juniper JNCIA (CERT20230807851)</span>
-                        <p class="project-description">IDN.ID Training Center</p>
-                        <a href="https://drive.google.com/file/d/1FpmZtnVQC_bJH9LdOMe9C3sD0kpL0tIK/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">Juniper JNCIA <span class="cert-id">(CERT20230807851)</span></h3>
+                                <p class="cert-issuer"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1FpmZtnVQC_bJH9LdOMe9C3sD0kpL0tIK/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">Basic Penetration Testing (CERT20230507130)</span>
-                        <p class="project-description">IDN.ID Training Center</p>
-                        <a href="https://drive.google.com/file/d/150rifD4Zsip22-vRpBnjascvbCdlQxut/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">Basic Penetration Testing <span class="cert-id">(CERT20230507130)</span></h3>
+                                <p class="cert-issuer"><i class="fas fa-building"></i> IDN.ID Training Center</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/150rifD4Zsip22-vRpBnjascvbCdlQxut/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">Certified Network Associate (CCNA) CSCO14076361</span>
-                        <p class="project-description">Cisco</p>
-                        <a href="https://drive.google.com/file/d/1MvZZOb0IRdlI2wbPwb3MvBx-vl-zi9Ut/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">Cisco Certified Network Associate (CCNA) <span class="cert-id">(CSCO14076361)</span></h3>
+                                <p class="cert-issuer"><i class="fas fa-building"></i> Cisco</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1MvZZOb0IRdlI2wbPwb3MvBx-vl-zi9Ut/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">MikroTik Certified Routing Engineer (MTCRE) 2106RE9188</span>
-                        <p class="project-description">MikroTik</p>
-                        <a href="https://drive.google.com/file/d/1mG5F7LOjstoTLaxUkWNJpfX415zsQH2F/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">MikroTik Certified Routing Engineer (MTCRE) <span class="cert-id">(2106RE9188)</span></h3>
+                                <p class="cert-issuer"><i class="fas fa-building"></i> MikroTik</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1mG5F7LOjstoTLaxUkWNJpfX415zsQH2F/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">MikroTik Certified Network Associate (MTCNA) 2104NA4502</span>
-                        <p class="project-description">MikroTik</p>
-                        <a href="https://drive.google.com/file/d/16nrIuWb4SQq-aty3HTIwOOd2MRWk0vms/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">MikroTik Certified Network Associate (MTCNA) <span class="cert-id">(2104NA4502)</span></h3>
+                                <p class="cert-issuer"><i class="fas fa-building"></i> MikroTik</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/16nrIuWb4SQq-aty3HTIwOOd2MRWk0vms/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
+
                 </ul>
             </section>
 
@@ -361,23 +523,68 @@
                     <h2>Books</h2>
                     <span class="section-divider"></span>
                 </div>
-                <ul class="item-list">
-                    <li>
-                        <span class="item-title">SANS - CCNA</span>
-                        <a href="https://drive.google.com/file/d/1uNKqRYjv8E6VnTLAFx654PGXx0ZWJiu6/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+                
+                <ul class="certificate-list">
+                    
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-book"></i> </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">SANS - CCNA</h3>
+                                <p class="cert-issuer"><i class="fas fa-file-pdf"></i> PDF Document</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1uNKqRYjv8E6VnTLAFx654PGXx0ZWJiu6/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">INNOCENT - CCNP</span>
-                        <a href="https://drive.google.com/file/d/1-HoqnBS4XZlCw4woXaM8xd_bIw7rveI4/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">INNOCENT - CCNP</h3>
+                                <p class="cert-issuer"><i class="fas fa-file-pdf"></i> PDF Document</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1-HoqnBS4XZlCw4woXaM8xd_bIw7rveI4/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">SECRET - MTCNA</span>
-                        <a href="https://drive.google.com/file/d/1lreE7jgEzb-ck4fKLCMUgRwiaNOn0tf8/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">SECRET - MTCNA</h3>
+                                <p class="cert-issuer"><i class="fas fa-file-pdf"></i> PDF Document</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1lreE7jgEzb-ck4fKLCMUgRwiaNOn0tf8/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
-                    <li>
-                        <span class="item-title">LATE - MTCRE</span>
-                        <a href="https://drive.google.com/file/d/1_TgmU39PJCeHvVVI5M0zlkD5-sFuB_9r/view?usp=sharing" class="view-item-btn" target="_blank" rel="noopener noreferrer">View &rarr;</a>
+
+                    <li class="cert-item">
+                        <div class="cert-left">
+                            <div class="cert-icon-box">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h3 class="cert-title">LATE - MTCRE</h3>
+                                <p class="cert-issuer"><i class="fas fa-file-pdf"></i> PDF Document</p>
+                            </div>
+                        </div>
+                        <div class="cert-right">
+                            <a href="https://drive.google.com/file/d/1_TgmU39PJCeHvVVI5M0zlkD5-sFuB_9r/view?usp=sharing" class="cert-btn" target="_blank" rel="noopener noreferrer">View <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </li>
+
                 </ul>
             </section>
 
